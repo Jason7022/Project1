@@ -1,0 +1,4 @@
+This transcript documents AI/LLM assistance used during Phase 1 (BNF + ANTLR grammar).
+Tool: ChatGPT (GPT-5 Thinking)
+Date range: Oct–Nov 2025
+Scope: Clarifying hashed keywords, case-insensitive fragments, and block ordering rules.

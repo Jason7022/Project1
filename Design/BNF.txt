@@ -1,0 +1,31 @@
+<lolcode> ::= "#HAI" <optional_comment> <optional_head> <body> "#KTHXBYE"
+<optional_comment> ::= <comment> | ε
+<optional_head> ::= <head> | ε
+<head> ::= "#MAEK" "HEAD" <comment_opt> <title> "#OIC"
+<title> ::= "#GIMMEH" "TITLE" <text> "#MKAY"
+<comment> ::= "#OBTW" <text> "#TLDR"
+<comment_opt> ::= <comment> | ε
+<body> ::= <paragraph_list> | ε
+<paragraph_list> ::= <paragraph> <paragraph_list> | ε
+<paragraph> ::= "#MAEK" "PARAGRAF" <inner_paragraph> "#OIC"
+<inner_paragraph> ::= <inner_element_list>
+<inner_element_list> ::= <inner_element> <inner_element_list> | ε
+<inner_element> ::= <text> | <bold> | <italics> | <list> | <audio> | <video> | <newline> |
+<variable_define> | <variable_use>
+<bold> ::= "#GIMMEH" "BOLD" <text> "#MKAY"
+<italics> ::= "#GIMMEH" "ITALICS" <text> "#MKAY"
+<list> ::= "#MAEK" "LIST" <list_items> "#OIC"
+<list_items> ::= <item> <list_items> | ε
+<item> ::= "#GIMMEH" "ITEM" <text> "#MKAY"
+<audio> ::= "#GIMMEH" "SOUNDZ" <address> "#MKAY"
+<video> ::= "#GIMMEH" "VIDZ" <address> "#MKAY"
+<newline> ::= "#GIMMEH" "NEWLINE"
+<variable_define> ::= "#I" "HAZ" <varname> "#IT" "IZ" <value> "#MKAY"
+<variable_use> ::= "#LEMME" "SEE" <varname> "#MKAY"
+<text> ::= <word> <text> | ε
+<word> ::= <letter_or_digit_or_punct>
+<address> ::= <text>
+<varname> ::= <identifier>
+<value> ::= <text>
+<identifier> ::= <letter> <identifier_tail>
+
